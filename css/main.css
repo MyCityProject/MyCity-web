@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  transition: all 0.2s ease;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Repo";
+  src: url(../fonts/Repo.woff);
+}
+body {
+  background: rgb(2, 148, 255);
+  font-family: "Repo", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgb(2, 148, 255);
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+  margin: 20px 40px;
+}
+
+.window-registration {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background: rgb(145, 211, 255);
+  width: 700px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.window-registration__menu {
+  display: flex;
+}
+.window-registration__menu > * {
+  font-size: 25px;
+}
+.window-registration__menu > *:hover span {
+  transform: scale(1.2);
+}
+.window-registration__registation-radio {
+  width: 50%;
+  height: 70px;
+  background: rgb(234, 213, 26);
+}
+.window-registration__login-radio {
+  width: 50%;
+  height: 70px;
+  background: none;
+  border-bottom: 1px solid #000;
+}
+.window-registration__map {
+  width: 75%;
+  margin: 50px 50%;
+  transform: translateX(-55%);
+}
+.window-registration path:hover {
+  fill: #ead51aad;
+}
+.window-registration path.kyiv.active,
+.window-registration path.lviv.active {
+  fill: #ead51a;
+}
+.window-registration__lviv-window {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  padding: 18px;
+  border-radius: 30px;
+  background: #ead51a;
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+}
+.window-registration__lviv-window.active {
+  display: inline-block;
+}
+.window-registration__kyiv-window {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  padding: 18px;
+  border-radius: 30px;
+  background: #ead51a;
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+}
+.window-registration__kyiv-window.active {
+  display: inline-block;
+}
+.window-registration__btn-confirm {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 18px;
+  border-radius: 30px;
+  background: #ead51a;
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+}
+.window-registration__btn-confirm::after {
+  content: url('../img/arrow.right.svg');
+  display: inline-block;
+  margin: 0 0 0 4px;
+}
+.window-registration__btn-confirm:hover {
+  box-shadow: 3px 3px 15px #ead51a;
+}
+.window-registration__btn-confirm.active {
+  display: block;
+}
